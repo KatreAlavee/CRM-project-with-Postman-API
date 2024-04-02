@@ -1,0 +1,1084 @@
+{
+	"info": {
+		"_postman_id": "b2f905e7-0871-4d4f-ba1f-1252080a60ac",
+		"name": "CRM Collection Katre",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27089756"
+	},
+	"item": [
+		{
+			"name": "Magicusers API",
+			"item": [
+				{
+					"name": "Get the list",
+					"item": [
+						{
+							"name": "Get the list of all Magicusers",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "50",
+											"disabled": true
+										},
+										{
+											"key": "sort_field",
+											"value": "email_text",
+											"disabled": true
+										},
+										{
+											"key": "descending",
+											"value": "false",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list of all Magicusers - with limit value",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=35",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "35"
+										},
+										{
+											"key": "cursor",
+											"value": "150",
+											"disabled": true
+										},
+										{
+											"key": "sort_field",
+											"value": "email_text",
+											"disabled": true
+										},
+										{
+											"key": "descending",
+											"value": "false",
+											"disabled": true
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"email_text\", \"constraint_type\": \"equals\", \"value\": \"\" }]",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list of all Magicusers - cursor value 2",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=100&cursor=2",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "cursor",
+											"value": "2"
+										},
+										{
+											"key": "sort_field",
+											"value": "email_text",
+											"disabled": true
+										},
+										{
+											"key": "descending",
+											"value": "false",
+											"disabled": true
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"email_text\", \"constraint_type\": \"equals\", \"value\": \"\" }]",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list of all Magicusers - descending",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=100&cursor=0&descending=true",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "cursor",
+											"value": "0"
+										},
+										{
+											"key": "sort_field",
+											"value": "email_text",
+											"disabled": true
+										},
+										{
+											"key": "descending",
+											"value": "true"
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"email_text\", \"constraint_type\": \"equals\", \"value\": \"\" }]",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list of all Magicusers - ascending",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=100&cursor=0&descending=false",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "cursor",
+											"value": "0"
+										},
+										{
+											"key": "sort_field",
+											"value": "email_text",
+											"disabled": true
+										},
+										{
+											"key": "descending",
+											"value": "false"
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"email_text\", \"constraint_type\": \"equals\", \"value\": \"\" }]",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list - Sort field by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=100&cursor=0&sort_field=_id",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "cursor",
+											"value": "0"
+										},
+										{
+											"key": "sort_field",
+											"value": "_id"
+										},
+										{
+											"key": "descending",
+											"value": "false",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list - Sort field by email descending",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=100&cursor=0&sort_field=email_text&descending=true",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "cursor",
+											"value": "0"
+										},
+										{
+											"key": "sort_field",
+											"value": "email_text"
+										},
+										{
+											"key": "descending",
+											"value": "true"
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"email_text\", \"constraint_type\": \"equals\", \"value\": \"fantasy@demo.com\" }]",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list - Sort field by email ascending",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=100&cursor=0&sort_field=email_text&descending=false",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "cursor",
+											"value": "0"
+										},
+										{
+											"key": "sort_field",
+											"value": "email_text"
+										},
+										{
+											"key": "descending",
+											"value": "false"
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"email_text\", \"constraint_type\": \"equals\", \"value\": \"fantasy@demo.com\" }]",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list - Sort field by link_opened_boolean value: true",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=100&cursor=50&sort_field=link_opened_boolean&constraints=[{\"key\": \"link_opened_boolean\", \"constraint_type\": \"equals\", \"value\": true }]",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "cursor",
+											"value": "50"
+										},
+										{
+											"key": "sort_field",
+											"value": "link_opened_boolean"
+										},
+										{
+											"key": "link_opened_boolean",
+											"value": " ",
+											"disabled": true
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"link_opened_boolean\", \"constraint_type\": \"equals\", \"value\": true }]"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list - Sort field by link_opened_boolean value: false",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=100&cursor=0&sort_field=link_opened_boolean&constraints=[{\"key\": \"link_opened_boolean\", \"constraint_type\": \"equals\", \"value\": false},{\"key\": \"link_opened_boolean\", \"constraint_type\": \"is_not_empty\"}]",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "cursor",
+											"value": "0"
+										},
+										{
+											"key": "sort_field",
+											"value": "link_opened_boolean"
+										},
+										{
+											"key": "link_opened_boolean",
+											"value": " ",
+											"disabled": true
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"link_opened_boolean\", \"constraint_type\": \"equals\", \"value\": false},{\"key\": \"link_opened_boolean\", \"constraint_type\": \"is_not_empty\"}]"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list - Sort field by full name",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=100&cursor=0&descending=false&sort_field=full_name_text",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "cursor",
+											"value": "0"
+										},
+										{
+											"key": "descending",
+											"value": "false"
+										},
+										{
+											"key": "sort_field",
+											"value": "full_name_text"
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"full_name_text\", \"constraint_type\": \"equals\", \"value\": \"Katre Alavee\" }]",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list - Sort field by constraint - full name text",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=100&cursor=0&sort_field=full_name_text&descending=false&constraints=[{\"key\": \"full_name_text\", \"constraint_type\": \"equals\", \"value\": \"Something something\" }]",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "cursor",
+											"value": "0"
+										},
+										{
+											"key": "sort_field",
+											"value": "full_name_text"
+										},
+										{
+											"key": "descending",
+											"value": "false"
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"full_name_text\", \"constraint_type\": \"equals\", \"value\": \"Something something\" }]"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list - Sort field by constraint - email_text",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=100&cursor=0&sort_field=email_text&descending=false&constraints=[{\"key\": \"email_text\", \"constraint_type\": \"equals\", \"value\": \"jeanflava@gmail.com\" }]",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "cursor",
+											"value": "0"
+										},
+										{
+											"key": "sort_field",
+											"value": "email_text"
+										},
+										{
+											"key": "descending",
+											"value": "false"
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"email_text\", \"constraint_type\": \"equals\", \"value\": \"jeanflava@gmail.com\" }]"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list - Sort field by constraint - _id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=100&cursor=0&sort_field=_id&descending=false&constraints=[{\"key\": \"_id\", \"constraint_type\": \"equals\", \"value\": \"1683120828400x279003341476331520\" }]",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "cursor",
+											"value": "0"
+										},
+										{
+											"key": "sort_field",
+											"value": "_id"
+										},
+										{
+											"key": "descending",
+											"value": "false"
+										},
+										{
+											"key": "email_text",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"_id\", \"constraint_type\": \"equals\", \"value\": \"1683120828400x279003341476331520\" }]"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list - Sort field by constraint - created date",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=100&cursor=0&descending=false&constraints=[{\"key\": \"Created Date\", \"constraint_type\": \"equals\", \"value\": \"2023-05-03T13:33:49.799Z\" }]",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "cursor",
+											"value": "0"
+										},
+										{
+											"key": "sort_field",
+											"value": "Created date",
+											"disabled": true
+										},
+										{
+											"key": "descending",
+											"value": "false"
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"Created Date\", \"constraint_type\": \"equals\", \"value\": \"2023-05-03T13:33:49.799Z\" }]"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list - Sort field by constraint - created by",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=100&cursor=0&descending=false&constraints=[{\"key\": \"Created by\", \"constraint_type\": \"equals\", \"value\": \"admin_user_cerebrumhubcrmlite_live\" }]",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "cursor",
+											"value": "0"
+										},
+										{
+											"key": "sort_field",
+											"value": "email_text",
+											"disabled": true
+										},
+										{
+											"key": "descending",
+											"value": "false"
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"Created by\", \"constraint_type\": \"equals\", \"value\": \"admin_user_cerebrumhubcrmlite_live\" }]"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list - Sort field by constraint - Modified Date",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=100&cursor=0&descending=false&constraints=[{\"key\": \"Modified Date\", \"constraint_type\": \"equals\", \"value\": \"2023-05-03T13:33:49.875Z\" }]",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "cursor",
+											"value": "0"
+										},
+										{
+											"key": "sort_field",
+											"value": "email_text",
+											"disabled": true
+										},
+										{
+											"key": "descending",
+											"value": "false"
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"Modified Date\", \"constraint_type\": \"equals\", \"value\": \"2023-05-03T13:33:49.875Z\" }]"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list - Sort field by created date descending",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=100&cursor=0&sort_field=Created Date&descending=true",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "cursor",
+											"value": "0"
+										},
+										{
+											"key": "sort_field",
+											"value": "Created Date"
+										},
+										{
+											"key": "descending",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list - Sort field by created date ascending",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=100&cursor=0&sort_field=Created Date&descending=false",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "cursor",
+											"value": "0"
+										},
+										{
+											"key": "sort_field",
+											"value": "Created Date"
+										},
+										{
+											"key": "descending",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list - Sort field by created by",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=100&cursor=0&sort_field=Created By&descending=false",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "cursor",
+											"value": "0"
+										},
+										{
+											"key": "sort_field",
+											"value": "Created By"
+										},
+										{
+											"key": "descending",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list - Sort field by Modified Date descending",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=100&cursor=0&sort_field=Modified Date&descending=true",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "cursor",
+											"value": "0"
+										},
+										{
+											"key": "sort_field",
+											"value": "Modified Date"
+										},
+										{
+											"key": "descending",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list - Sort field by Modified Date ascending",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl }}/obj/magicuser?limit=100&cursor=0&sort_field=Modified Date&descending=false",
+									"host": [
+										"{{baseUrl }}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "cursor",
+											"value": "0"
+										},
+										{
+											"key": "sort_field",
+											"value": "Modified Date"
+										},
+										{
+											"key": "descending",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Post - Create a new magicuser",
+					"item": [
+						{
+							"name": "Create a new Magicuser - with email and link_opened_boolean",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email_text\": \"katre@hot.ee\",\n  \"link_opened_boolean\": true\n}"
+								},
+								"url": {
+									"raw": "{{BaseURL}}/obj/magicuser",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Magicuser - without body",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n}"
+								},
+								"url": {
+									"raw": "{{BaseURL}}/obj/magicuser",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Magicuser - without email",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"link_opened_boolean\": true\n}"
+								},
+								"url": {
+									"raw": "{{BaseURL}}/obj/magicuser",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Magicuser - incorrect email format",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email_text\": \"555555\",\n  \"link_opened_boolean\": true\n}"
+								},
+								"url": {
+									"raw": "{{BaseURL}}/obj/magicuser",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Magicuser - email with more than 100 symbols",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email_text\": \"123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105\",\n  \"link_opened_boolean\": true\n}"
+								},
+								"url": {
+									"raw": "{{BaseURL}}/obj/magicuser",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Magicuser - with only email",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email_text\": \"katre@hotmail.com\",\n}"
+								},
+								"url": {
+									"raw": "{{BaseURL}}/obj/magicuser",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"obj",
+										"magicuser"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{authToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "authToken",
+			"value": "AUTH_TOKEN"
+		},
+		{
+			"key": "baseUrl ",
+			"value": "https://cerebrumhubcrmlite.bubbleapps.io/api/1.1",
+			"type": "string"
+		},
+		{
+			"key": "BaseURL",
+			"value": "https://cerebrumhubcrmlite.bubbleapps.io/api/1.1"
+		}
+	]
+}
